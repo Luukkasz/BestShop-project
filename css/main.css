@@ -807,4 +807,113 @@ a {
 .pricing__box--basic .pricing__price {
   margin-bottom: 22px;
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 80px 100px 100px 100px;
+}
+
+.contact__box {
+  width: 50%;
+}
+
+.contact__title {
+  font-size: 3.0625rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.contact__info {
+  font-size: 1rem;
+  margin: 22px 0 42px 0;
+}
+
+.contact__details--item {
+  color: #A5A5A5;
+}
+.contact__details--item:nth-of-type(2) {
+  margin-left: 20px;
+}
+.contact__details--item img {
+  margin-right: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+}
+.form__row:first-of-type {
+  margin-bottom: 42px;
+}
+.form__row label {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  color: #08A6E4;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+}
+.form__row input {
+  border: none;
+  border-bottom: 1px solid #A5A5A5;
+  line-height: 2.625rem;
+}
+
+.form__info {
+  margin-top: 30px;
+}
+
+.form__checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.375rem;
+}
+
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form__checkbox .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 1px solid #A5A5A5;
+  border-radius: 4px;
+}
+
+.form__checkbox input:checked + .checkbox {
+  background-image: url(../../images/Checkmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.consent__text {
+  font-size: 0.75rem;
+  color: #707070;
+}
+
+.form__btn {
+  background-color: #08A6E4;
+  align-self: flex-end;
+  border-radius: 35px;
+  border: none;
+  box-shadow: 5px 10px 14px #07ACE629;
+  padding: 20px 97px;
+  margin-top: 20px;
+}
 /*# sourceMappingURL=main.css.map */

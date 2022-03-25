@@ -1,0 +1,119 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 80px 100px 100px 100px;
+}
+
+// Ustalamy szerokość kolumn w flexie
+.contact__box {
+    width: 50%;
+}
+
+.contact__title {
+    font-size: toRem(49px);
+    font-family: $font-raleway;
+}
+
+.contact__info {
+    font-size: toRem(16px);
+    margin: 22px 0 42px 0;
+}
+
+
+.contact__details--item {
+    color: $color-grey;
+
+    &:nth-of-type(2) {
+        margin-left: 20px;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.form__row {
+    display: flex;
+    flex-direction: column;
+
+    &:first-of-type {
+        margin-bottom: 42px;
+    }
+
+    label {
+        font-size: toRem(11px);
+        font-weight: bold;
+        color: $color-primary;
+        letter-spacing: 3.28px;
+        text-transform: uppercase;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid $color-grey;
+        // Rozszerzamy pole inputa
+        line-height: 2.625rem;
+
+
+    }
+}
+
+
+.form__info {
+    margin-top: 30px;
+}
+
+.form__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.375rem;
+}
+
+.form__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form__checkbox .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 4px;
+}
+
+.form__checkbox input:checked+.checkbox {
+    background-image: url(../../images/Checkmark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.consent__text {
+    font-size: toRem(12px);
+    color: #707070;
+}
+
+.form__btn {
+    background-color: $color-primary;
+    align-self: flex-end;
+    border-radius: 35px;
+    border: none;
+    box-shadow: 5px 10px 14px #07ACE629;
+    padding: 20px 97px;
+    margin-top: 20px;
+}
