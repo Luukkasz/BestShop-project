@@ -617,4 +617,194 @@ a {
   color: #A5A5A5;
   text-align: center;
 }
+
+.benefits {
+  margin-top: 122px;
+  padding: 105px 0;
+  background-color: #F7F7F7;
+}
+
+.benefits__container {
+  max-width: 1124px;
+}
+
+.benefits__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3125rem;
+}
+
+.article {
+  background-color: #ffffff;
+  border: 1px solid #E8E9ED;
+  display: flex;
+  align-items: center;
+  padding: 35px;
+  height: 370px;
+}
+
+.article--right {
+  flex-direction: row-reverse;
+}
+
+.article__text {
+  width: 50%;
+}
+
+.article__text::after {
+  content: "";
+  display: block;
+  width: 328px;
+  height: 0px;
+  border: 2px solid #FB3B64;
+}
+
+.article__text--secound::after {
+  border-color: #08A6E4;
+}
+
+.article__text--third::after {
+  border-color: #55DFB4;
+}
+
+.article__heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
+}
+
+.article__description {
+  font-size: 1rem;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 80%;
+}
+
+.article__images {
+  width: 50%;
+  text-align: center;
+}
+
+.article__image {
+  width: 50%;
+  height: auto;
+}
+
+.pricing {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
+  margin-bottom: 21px;
+}
+
+.pricing__boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.pricing__box {
+  width: 370px;
+  border: 1px solid #FB3B64;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing__box--professional {
+  border-color: #08A6E4;
+  margin: 0 58px;
+  transform: scale(1.1);
+  box-shadow: 5px 10px 27px #07ACE629;
+}
+
+.pricing__box--premium {
+  border-color: #55DFB4;
+}
+
+.pricing__details {
+  margin-top: 34px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.pricing__type {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #13253B;
+}
+
+.pricing__price {
+  font-size: 2.875rem;
+  font-weight: 300;
+  color: #FB3B64;
+  margin-top: 14px;
+}
+
+.pricing__limited {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.75rem;
+  color: #13253B;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.pricing__items {
+  text-align: center;
+}
+
+.pricing__item {
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+
+.pricing__item::before {
+  content: "";
+  display: inline-block;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background-image: url(../../images/Ckechmark-1.svg);
+  margin-right: 10px;
+}
+
+.pricing__item--not::before {
+  background-image: url(../../images/Close.svg);
+}
+
+.pricing__box .btn {
+  position: relative;
+  bottom: -25px;
+  font-size: 0.8125rem;
+  background-color: #EB476E;
+  border-radius: 23px;
+}
+
+.pricing__box--professional .btn {
+  background-color: #08A6E4;
+}
+
+.pricing__box--premium .btn {
+  background-color: #55DFB4;
+}
+
+.pricing__box--professional .pricing__price {
+  color: #08A6E4;
+}
+
+.pricing__box--premium .pricing__price {
+  color: #55DFB4;
+}
+
+.pricing__box--basic .pricing__price {
+  margin-bottom: 22px;
+}
 /*# sourceMappingURL=main.css.map */

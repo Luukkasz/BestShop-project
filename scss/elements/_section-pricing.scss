@@ -1,0 +1,118 @@
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing__title {
+    font-family: $font-raleway;
+    font-size: toRem(36px);
+    margin-bottom: 21px;
+}
+
+.pricing__boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pricing__box {
+    width: 370px;
+    border: 1px solid #FB3B64;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing__box--professional {
+    border-color: $color-primary;
+    margin: 0 58px;
+    transform: scale(1.1);
+    box-shadow: 5px 10px 27px #07ACE629;
+}
+
+.pricing__box--premium {
+    border-color: $color-green;
+}
+
+.pricing__details {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pricing__type {
+    font-family: $font-raleway;
+    font-weight: bold;
+    font-size: toRem(20px);
+    color: #13253B;
+}
+
+.pricing__price {
+    font-size: toRem(46px);
+    font-weight: 300;
+    color: #FB3B64;
+    margin-top: 14px;
+}
+
+.pricing__limited {
+    font-family: $font-raleway;
+    font-size: toRem(12px);
+    color: #13253B;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.pricing__items {
+    text-align: center;
+}
+
+.pricing__item {
+    font-size: toRem(14px);
+    margin-bottom: 20px;
+}
+
+.pricing__item::before {
+    content: "";
+    display: inline-block;
+    width: toRem(11px);
+    height: toRem(11px);
+    background-image: url(../../images/Ckechmark-1.svg);
+    margin-right: 10px;
+}
+
+.pricing__item--not::before {
+    background-image: url(../../images/Close.svg);
+}
+
+.pricing__box .btn {
+    position: relative;
+    bottom: -25px;
+    font-size: 0.8125rem;
+    background-color: #EB476E;
+    border-radius: 23px;
+}
+
+.pricing__box--professional .btn {
+    background-color: $color-primary;
+}
+
+.pricing__box--premium .btn {
+    background-color: $color-green;
+}
+
+.pricing__box--professional .pricing__price {
+    color: $color-primary;
+}
+
+.pricing__box--premium .pricing__price {
+    color: $color-green;
+}
+
+.pricing__box--basic .pricing__price {
+    margin-bottom: 22px;
+}
