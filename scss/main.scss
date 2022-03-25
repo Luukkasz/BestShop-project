@@ -1,5 +1,9 @@
 @import "./generic/reset";
 
-@import "./variables/colors";
+@import "./variables/variables";
+@import "./variables/functions";
 
-@import "./variables/fonts";
+@import "./generic/base";
+
+
+@import "./elements/header";
