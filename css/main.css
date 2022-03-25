@@ -452,6 +452,7 @@ textarea {
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: #000000;
 }
 
 a {
@@ -499,38 +500,121 @@ a {
 }
 
 .opening {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.opening__container {
-  margin-top: 130px;
-  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.opening__container {
+  margin-top: 130px;
+  text-align: center;
+}
+
 .opening__title {
   font-family: "Raleway", sans-serif;
   font-size: 3.0625rem;
-  color: #000000;
   margin-bottom: 1.25rem;
 }
 
 .opening__description {
   font-size: 1rem;
-  color: #000000;
   margin-bottom: 2.375rem;
 }
 
-.opening__btn {
+.btn {
   display: inline-block;
-  background-color: #08A6E4;
   color: #ffffff;
+  font-weight: bold;
+  padding: 16px 65px;
+}
+
+.opening__btn {
+  background-color: #08A6E4;
   padding: 22px 157px;
   box-shadow: 5px 10px 14px #07ACE629;
   border-radius: 40px;
+}
+
+.opening__img {
+  width: 100%;
+  height: auto;
+}
+
+.stats__container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__item {
+  max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.stats__title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.stats__img-box {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.stats__item:nth-child(1) .stats__img-box {
+  background-color: #FB3B64;
+}
+
+.stats__item:nth-child(2) .stats__img-box {
+  background-color: #08A6E4;
+}
+
+.stats__item:nth-child(3) .stats__img-box {
+  background-color: #55DFB4;
+}
+
+.stats__img {
+  position: absolute;
+}
+
+.stats__item:nth-child(1) .stats__img {
+  top: 10%;
+}
+
+.stats__item:nth-child(2) .stats__img {
+  top: 20%;
+  left: 30%;
+}
+
+.stats__item:nth-child(3) .stats__img {
+  top: 10%;
+}
+
+.stats__number {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.3725rem;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  text-align: center;
+}
+
+.stats__description {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.0625rem;
+  color: #A5A5A5;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,35 +1,42 @@
 .opening {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.opening__container {
-    margin-top: 130px;
-    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.opening__container {
+    margin-top: 130px;
+    // Wyśrodkowujemy tekst w divie
+    text-align: center;
+}
+
 .opening__title {
     font-family: $font-raleway;
     font-size: toRem(49px);
-    color: $color-black;
     margin-bottom: toRem(20px);
 }
 
 .opening__description {
     font-size: toRem(16px);
-    color: $color-black;
     margin-bottom: toRem(38px);
 }
 
-.opening__btn {
+.btn {
     display: inline-block;
-    background-color: $color-primary;
     color: $color-white;
+    font-weight: bold;
+    padding: 16px 65px;
+}
+
+.opening__btn {
+    background-color: $color-primary;
     padding: 22px 157px;
     box-shadow: 5px 10px 14px #07ACE629;
     border-radius: 40px;
+}
+
+// Wyrównujemy obrazek względem rodzica
+.opening__img {
+    width: 100%;
+    height: auto;
 }

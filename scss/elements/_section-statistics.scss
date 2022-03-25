@@ -1,0 +1,78 @@
+.stats__container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats__item {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: $font-raleway;
+}
+
+
+.stats__title {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: $font-raleway;
+    font-size: toRem(36px);
+    text-align: center;
+}
+
+.stats__img-box {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.stats__item:nth-child(1) .stats__img-box {
+    background-color: $color-redish;
+}
+
+.stats__item:nth-child(2) .stats__img-box {
+    background-color: $color-primary;
+}
+
+.stats__item:nth-child(3) .stats__img-box {
+    background-color: $color-green;
+}
+
+.stats__img {
+    position: absolute;
+}
+
+.stats__item:nth-child(1) .stats__img {
+    top: 10%;
+}
+
+.stats__item:nth-child(2) .stats__img {
+    top: 20%;
+    left: 30%;
+}
+
+.stats__item:nth-child(3) .stats__img {
+    top: 10%;
+}
+
+.stats__number {
+    font-family: $font-raleway;
+    font-size: toRem(20px);
+    font-weight: 800;
+    letter-spacing: toRem(5.96px);
+    padding-bottom: toRem(20px);
+    padding-top: toRem(20px);
+    text-align: center;
+}
+
+.stats__description {
+    font-family: $font-raleway;
+    font-size: toRem(17px);
+    color: $color-grey;
+    text-align: center;
+}
