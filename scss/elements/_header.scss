@@ -38,3 +38,85 @@
         border-color: $color-primary;
     }
 }
+
+
+// RWD menu z hamburger
+
+// Ukrywamy checkboxa- label go zaznaczy
+.menu__btn {
+      display: none;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      opacity: 0;
+    }
+
+.menu__label {
+    // Label pojawia się poniżej 792px równo z momentem jak cała nawigacja znika- wchodzi w róg w jej miejsce
+    display: none;
+    @media (max-width: 792px) {
+        display: block;
+    }
+   
+    // Scyluemy hamburger- 3 spany z margin pottom
+    span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: $color-primary;
+        margin-bottom: 4px;
+        transition: .3s all ease-in-out;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+  
+
+@media (max-width: 792px){
+
+    // Poniżej 792px ukrywamy nav, ustawiamy ją position abolute w odpowiednim miejscu
+.header__nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.nav__item {
+    padding: 0;
+}
+
+.nav__link {
+    font-size: toRem(11px);
+    padding: 0 15px 5px 15px;
+}
+
+// Po nacisnieciu w hamburgera pojawia sie navigacja + burger zamienia sie w X
+.menu__btn:checked {
+    ~ .header__nav {
+        display: flex;
+    }
+
+    + .menu__label span {
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(3px, 5px);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(3px, -5px);
+          }
+    }
+}
+
+}
+
+

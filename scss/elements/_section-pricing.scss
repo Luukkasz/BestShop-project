@@ -116,3 +116,43 @@
 .pricing__box--basic .pricing__price {
     margin-bottom: 22px;
 }
+
+
+
+// RWD
+
+@include notebook {
+    .pricing {
+        margin: 50px auto;
+    }
+
+    .pricing__title {
+        margin-bottom: 0;
+    }
+    .pricing__boxes {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .pricing__box {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+        max-width: 270px;
+    }
+
+    .pricing__details {
+        flex-basis: 50%;
+        margin: 46px 0;
+    }
+
+    .pricing__items {
+        flex-basis: 50%;
+    }
+
+    .pricing__item:last-child{
+        margin-bottom: 0;
+    }
+}

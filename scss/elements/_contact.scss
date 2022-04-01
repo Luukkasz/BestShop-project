@@ -117,3 +117,35 @@
     padding: 20px 97px;
     margin-top: 20px;
 }
+
+
+
+
+// RWD
+
+@include tablet {
+    .contact {
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .contact__box {
+        flex-basis: 100%;
+
+        &:last-child{
+            margin-top: 49px;
+        }
+    }
+
+
+    .contact__details {
+        display: flex;
+        flex-direction: column;
+
+        & .contact__details--item {
+            margin: 7.5px 0;
+        }
+    }
+
+    
+}

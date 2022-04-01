@@ -1,0 +1,37 @@
+// Mixin dla media queries który korzysta z mapy celem wywołania skrótu wielkości w px
+@mixin mq($breakpoint) {
+    $bp-value: map.get($grid-breakpoints, $breakpoint);
+
+
+    @if $bp-value==null {
+        $bp-value: 0;
+        @warn "Breakpoint : #{$breakpoint} is undefined. Check variables.scss and $grid-breakpoints map for correct value";
+    }
+
+
+    @media only screen and (min-width: $bp-value) {
+        // Dodajemy @content aby dodać zawartość w klemarkach po @include
+        @content;
+    }
+}
+
+
+@mixin notebook {
+    @media (max-width: 1352px) {
+      @content;
+    }
+  }
+
+
+  @mixin tablet {
+    @media (max-width: 1048px) {
+      @content;
+    }
+  }
+
+
+  @mixin mobile {
+    @media (max-width: 792px) {
+      @content;
+    }
+  }
