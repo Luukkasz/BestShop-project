@@ -1114,7 +1114,7 @@ a {
 }
 .calc__select .select__input::after {
   content: "";
-  background-image: url("../assets/Arrow.svg");
+  background-image: url("../../images/Arrow Down.svg");
   width: 22px;
   height: 22px;
   display: block;
@@ -1195,6 +1195,10 @@ a {
 .calc__summary .list__item .item__price {
   font-weight: 700;
   font-size: 1.125rem;
+}
+
+.showItem {
+  display: block !important;
 }
 
 .contact {
