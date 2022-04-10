@@ -1,6 +1,9 @@
 // Zmienne do obliczeń
 const productPrice = 0.5;
 const orderPrice = 0.25;
+const basicPrice = 0;
+const professionalPrice = 25;
+const premiumPrice = 60;
 let accountingPrice = 50;
 let terminalPrice = 25;
 let totalValue = 0;
@@ -41,16 +44,15 @@ selectInput.addEventListener("click", function(){
 });
 
 
-// Funkcja zmieniająca wartość w package
+// Funkcja zmieniająca napis w package oraz zielonym divie
 packageList.querySelectorAll("li").forEach(function(item){
     item.addEventListener("click", function(e){
-        document.querySelector(".select__input").textContent = item.textContent;
+        packageDiv.textContent = item.textContent;
+        packageCalcSpan.textContent = item.textContent;
     });
 });
 
 
-// ClassList.toggle (open) --- można uzyć
-// Stworzyc tablice widocznych elementów i wtedy iterować przez tą tablicę (znalezc ceche wspolna- np. text content pusty)
 // Funkcja ukrywająca niezaznaczone elementy
 function hideNotSelectedSummary(){
     if(productsInput.value.length > 0){
@@ -109,32 +111,57 @@ function addPrices(event){
     // Wynik
     ordersPriceSpan.textContent = `$${ordersInput.value * orderPrice}`;
 
-    // Package obliczenia
-    packageCalcSpan.textContent = document.querySelector(".select__input").textContent;
+    // Package wynik tekstu
+    if(packageCalcSpan.textContent === "Basic"){
+        packagePriceSpan.textContent = `$${basicPrice}`;
+    } else if(packageCalcSpan.textContent === "Professional"){
+        packagePriceSpan.textContent = `$${professionalPrice}`;
+    } else if(packageCalcSpan.textContent === "Premium") {
+        packagePriceSpan.textContent = `$${premiumPrice}`;
+    };
 
 
     // Suma całkowita
     totalValue = productsInput.value * productPrice + ordersInput.value * orderPrice;
+
+    if(packageCalcSpan.textContent === "Basic"){
+        totalValue += basicPrice;
+    } else if(packageCalcSpan.textContent === "Professional"){
+        totalValue += professionalPrice;;
+    } else if(packageCalcSpan.textContent === "Premium") {
+        totalValue += premiumPrice;
+    };
+
+    if(accountingCheckBox.checked){
+        totalValue += accountingPrice;
+    };
+
+    if (terminalCheckBox.checked){
+        totalValue += terminalPrice;
+    };
+
     totalPriceSpan.textContent = `$${totalValue}`;
 };
 
 
 
-// Uruchomienie odpowiednich funkcji
-form.addEventListener("keyup", hideNotSelectedSummary);
-form.addEventListener("change", hideNotSelectedSummary);
-form.addEventListener("click", hideNotSelectedSummary);
-
-form.addEventListener("keyup", addPrices);
-form.addEventListener("click", addPrices);
 
 // Jakie eventy uzyc
-// Add event listenery uzyc bezposrednio na elementach
 // checkboxy --- change
 // input --- input
 // selectory --- klikniecie
 
 
+productsInput.addEventListener("input", hideNotSelectedSummary);productsInput.addEventListener("input", addPrices);
 
+ordersInput.addEventListener("input", hideNotSelectedSummary);
+ordersInput.addEventListener("input", addPrices);
 
+selectInput.addEventListener("click", hideNotSelectedSummary);
+selectInput.addEventListener("click", addPrices);
 
+accountingCheckBox.addEventListener("change", hideNotSelectedSummary);
+accountingCheckBox.addEventListener("change", addPrices);
+
+terminalCheckBox.addEventListener("change", hideNotSelectedSummary);
+terminalCheckBox.addEventListener("change", addPrices);

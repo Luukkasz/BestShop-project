@@ -1058,8 +1058,10 @@ a {
     padding: 30px 15px;
   }
 }
-.calc h2 {
+.calc .calc__title {
   text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
 }
 .calc__columns {
   max-width: 865px;
