@@ -1203,6 +1203,10 @@ a {
   display: block !important;
 }
 
+.rotate180 {
+  transform: rotate(180deg);
+}
+
 .contact {
   display: flex;
   justify-content: center;

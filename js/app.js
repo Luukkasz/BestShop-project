@@ -41,6 +41,7 @@ const totalPriceSpan = document.querySelector(".total__price");
 // Funkcja która rozwija listę package po kliknięciu
 selectInput.addEventListener("click", function(){
     packageList.classList.toggle("showItem");
+    document.querySelector(".calc__select .select__input::after").style.transform = "rotate(180deg)";
 });
 
 
