@@ -81,12 +81,12 @@
     display: inline-block;
     width: toRem(11px);
     height: toRem(11px);
-    background-image: url(../../images/Ckechmark-1.svg);
+    background-image: url(../images/Ckechmark-1.svg);
     margin-right: 10px;
 }
 
 .pricing__item--not::before {
-    background-image: url(../../images/Close.svg);
+    background-image: url(../images/Close.svg);
 }
 
 .pricing__box .btn {
