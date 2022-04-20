@@ -1296,7 +1296,7 @@ a {
 }
 
 .form__checkbox input:checked + .checkbox {
-  background-image: url(../../images/Checkmark.svg);
+  background-image: url("../../images/Checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
