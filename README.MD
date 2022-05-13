@@ -8,6 +8,7 @@ Created to consolidate my knowledge of:
 - RWD, 
 - JS basics.
 <br>
+<br>
 
-###Link:
+Link: <br>
 https://luukkasz.github.io/BestShop-project/
