@@ -1,5 +1,13 @@
 # Responsive website
 
-## Created using the sass preprocessor and Javascript
 
-### Try it out: https://luukkasz.github.io/BestShop-project/
+One of my first projects. <br>
+Created to consolidate my knowledge of:
+- HTML, 
+- CSS,
+- RWD, 
+- JS basics.
+<br>
+<br>
+####Link:
+https://luukkasz.github.io/BestShop-project/
